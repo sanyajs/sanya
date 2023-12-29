@@ -1,0 +1,34 @@
+{
+  "name": "@sanyajs/sanya",
+  "version": "0.1.0",
+  "description": "@sanyajs/sanya",
+  "homepage": "https://github.com/sanyajs/sanya/tree/master/packages/sanya#readme",
+  "bugs": "https://github.com/sanyajs/sanya/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanyajs/sanya"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "sanya": "bin/sanya.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "index.d.ts",
+    "index.js"
+  ],
+  "scripts": {
+    "build": "umi-scripts father build",
+    "build:deps": "umi-scripts bundleDeps",
+    "dev": "umi-scripts father dev"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "chiaweilee <ljw@live.jp> (https://github.com/chiaweilee)"
+  ]
+}
