@@ -25,6 +25,9 @@
     "build:deps": "umi-scripts bundleDeps",
     "dev": "umi-scripts father dev"
   },
+  "dependencies": {
+    "@umijs/preset-vue": "^4.0.90"
+  },
   "publishConfig": {
     "access": "public"
   },
