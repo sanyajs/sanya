@@ -1,6 +1,8 @@
 export default () => {
   return {
-    presets: [],
-    plugins: [],
+    plugins: [
+      require.resolve('./plugins/alias'),
+      require.resolve('./plugins/checker'),
+    ],
   };
 };
