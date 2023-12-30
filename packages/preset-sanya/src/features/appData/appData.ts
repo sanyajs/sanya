@@ -26,9 +26,9 @@ export default (api: IApi) => {
     memo.npmClient = api.userConfig.npmClient || getNpmClient({ cwd: api.cwd });
     memo.umi = {
       version: require('../../../package.json').version,
-      name: 'Umi',
-      importSource: 'umi',
-      cliName: 'umi',
+      name: 'Sanya',
+      importSource: 'sanya',
+      cliName: 'sanya',
     };
     memo.bundleStatus = {
       done: false,
@@ -63,6 +63,8 @@ export default (api: IApi) => {
       memo.git = git;
     }
 
+    memo.framework = 'vue';
+
     // load ts info
     const tsPkg = tryLoadDepPkg({
       name: 'typescript',
@@ -84,6 +86,9 @@ export default (api: IApi) => {
   api.register({
     key: 'onGenerateFiles',
     async fn(args: IOnGenerateFiles) {
+      // fix: @umijs/preset-umi/dist/commands/dev/getBabelOpts.js, cann't read property 'version' of undefined
+      api.appData.react = { version: '0.0.0' };
+
       if (!args.isFirstTime) {
         api.appData.appJS = await getAppJsInfo();
         const { globalCSS, globalJS, overridesCSS, globalLoading } =

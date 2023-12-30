@@ -14,7 +14,7 @@ export class Service extends CoreService {
       cwd,
       defaultConfigFiles: opts?.defaultConfigFiles || DEFAULT_CONFIG_FILES,
       frameworkName: opts?.frameworkName || FRAMEWORK_NAME,
-      presets: opts?.presets || [],
+      presets: [require.resolve('@sanyajs/preset-sanya'),  ...(opts?.presets || [])],
       plugins: [
         existsSync(join(cwd, 'plugin.ts')) && join(cwd, 'plugin.ts'),
         existsSync(join(cwd, 'plugin.js')) && join(cwd, 'plugin.js'),

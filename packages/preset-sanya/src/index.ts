@@ -21,14 +21,11 @@ export default () => {
       require.resolve('@umijs/preset-umi/dist/features/polyfill/polyfill'),
       require.resolve('@umijs/preset-umi/dist/features/polyfill/publicPathPolyfill'),
       require.resolve('@umijs/preset-umi/dist/features/prepare/prepare'),
+      require.resolve('@umijs/preset-umi/dist/features/terminal/terminal'),
 
       // 1. generate tmp files
       require.resolve('@umijs/preset-umi/dist/features/tmpFiles/tmpFiles'),
       // 2. `clientLoader` and `routeProps` depends on `tmpFiles` files
-      require.resolve('@umijs/preset-umi/dist/features/clientLoader/clientLoader'),
-      require.resolve('@umijs/preset-umi/dist/features/routeProps/routeProps'),
-      // 3. `ssr` needs to be run last
-      require.resolve('@umijs/preset-umi/dist/features/ssr/ssr'),
 
       require.resolve('@umijs/preset-umi/dist/features/tmpFiles/configTypes'),
       require.resolve('@umijs/preset-umi/dist/features/transform/transform'),
@@ -37,7 +34,6 @@ export default () => {
       require.resolve('@umijs/preset-umi/dist/features/monorepo/redirect'),
       require.resolve('@umijs/preset-umi/dist/features/legacy/legacy'),
       require.resolve('@umijs/preset-umi/dist/features/classPropertiesLoose/classPropertiesLoose'),
-      require.resolve('@umijs/preset-umi/dist/features/webpack/webpack'),
 
       // commands
       require.resolve('@umijs/preset-umi/dist/commands/build'),
@@ -50,8 +46,13 @@ export default () => {
       require.resolve('./commands/version'),
       require.resolve('@umijs/preset-umi/dist/commands/verify-commit'),
       require.resolve('@umijs/preset-umi/dist/commands/preview'),
-      require.resolve('@umijs/preset-umi/dist/commands/mfsu/mfsu'),
       require.resolve('@umijs/plugin-run'),
+
+      // vue
+      require.resolve('./features/vue/default'),
+      require.resolve('./features/vue/webpack'),
+      require.resolve('./features/vue/tmpFiles/tmpFiles'),
+      require.resolve('./features/vue/vite/vite'),
     ].filter(Boolean),
   };
 };

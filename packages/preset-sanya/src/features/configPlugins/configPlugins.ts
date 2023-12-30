@@ -1,6 +1,6 @@
 import { getSchemas as getViteSchemas } from "@umijs/bundler-vite/dist/schema";
 import { getSchemas as getWebpackSchemas } from "@umijs/bundler-webpack/dist/schema";
-import type { IApi } from "@umijs/preset-umi";
+import type { IApi } from "umi";
 import { getSchemas as getExtraSchemas } from "./schema";
 
 export default (api: IApi) => {

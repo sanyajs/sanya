@@ -57,10 +57,3 @@ export async function run(opts?: IOpts) {
     }
   }
 }
-
-run({
-  presets: [require.resolve('../preset')],
-}).catch((e) => {
-  console.error(e);
-  process.exit(1);
-});

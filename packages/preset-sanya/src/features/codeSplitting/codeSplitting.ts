@@ -1,5 +1,5 @@
 import crypto from 'crypto';
-import type { IApi } from "@umijs/preset-umi";
+import type { IApi } from "umi";
 
 export default (api: IApi) => {
   api.describe({
@@ -58,6 +58,7 @@ export default (api: IApi) => {
     }
     if (jsStrategy === 'granularChunks') {
       const FRAMEWORK_BUNDLES = [
+        'vue',
         // 'core-js',
         // 'regenerator-runtime',
         'scheduler',

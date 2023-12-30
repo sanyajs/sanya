@@ -18,22 +18,30 @@
   "scripts": {
     "build": "umi-scripts father build",
     "build:deps": "umi-scripts bundleDeps",
-    "dev": "umi-scripts father dev",
-    "test": "umi-scripts jest-turbo"
+    "dev": "umi-scripts father dev"
   },
   "dependencies": {
     "@umijs/preset-umi": "^4.0.90",
+    "@umijs/renderer-vue": "^4.0.90",
     "@umijs/bundler-utils": "^4.0.90",
     "@umijs/bundler-vite": "^4.0.90",
     "@umijs/bundler-webpack": "^4.0.90",
     "@umijs/core": "^4.0.90",
     "@umijs/plugin-run": "^4.0.90",
     "@umijs/utils": "^4.0.90",
+    "@umijs/zod2ts": "^4.0.90",
+    "@vitejs/plugin-vue-jsx": "3.0.1",
+    "@vue/babel-plugin-jsx": "1.1.1",
     "core-js": "3.34.0",
-    "regenerator-runtime": "0.13.11"
+    "regenerator-runtime": "0.13.11",
+    "vue": "3.2.45",
+    "vue-loader": "17.0.1",
+    "vue-router": "4.1.6",
+    "webpack": "^5.75.0"
   },
   "devDependencies": {
     "@types/ini": "1.3.31",
+    "@vitejs/plugin-vue": "4.1.0",
     "ini": "3.0.0",
     "os-locale": "^6.0.2"
   },
@@ -45,14 +53,21 @@
   ],
   "compiledConfig": {
     "deps": [
+      "@vitejs/plugin-vue",
       "ini",
       "os-locale"
     ],
     "externals": {
+      "esbuild": "@umijs/bundler-utils/compiled/esbuild",
       "prettier": "@umijs/utils/compiled/prettier",
       "lodash": "@umijs/utils/compiled/lodash",
-      "glob": "@umijs/utils/compiled/glob"
+      "glob": "@umijs/utils/compiled/glob",
+      "vue": "vue",
+      "vue/compiler-sfc": "vue/compiler-sfc",
+      "vite": "@umijs/bundler-vite/compiled/vite"
     },
-    "excludeDtsDeps": []
+    "excludeDtsDeps": [
+      "@vitejs/plugin-vue"
+    ]
   }
 }
