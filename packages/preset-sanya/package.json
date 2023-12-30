@@ -1,0 +1,58 @@
+{
+  "name": "@sanyajs/preset-sanya",
+  "version": "0.1.0",
+  "description": "@sanyajs/preset-sanya",
+  "homepage": "https://github.com/sanyajs/sanya/tree/master/packages/preset-sanya#readme",
+  "bugs": "https://github.com/sanyajs/sanya/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanyajs/sanya"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "compiled"
+  ],
+  "scripts": {
+    "build": "umi-scripts father build",
+    "build:deps": "umi-scripts bundleDeps",
+    "dev": "umi-scripts father dev",
+    "test": "umi-scripts jest-turbo"
+  },
+  "dependencies": {
+    "@umijs/preset-umi": "^4.0.90",
+    "@umijs/bundler-utils": "^4.0.90",
+    "@umijs/bundler-vite": "^4.0.90",
+    "@umijs/bundler-webpack": "^4.0.90",
+    "@umijs/core": "^4.0.90",
+    "@umijs/plugin-run": "^4.0.90",
+    "@umijs/utils": "^4.0.90",
+    "core-js": "3.34.0",
+    "regenerator-runtime": "0.13.11"
+  },
+  "devDependencies": {
+    "@types/ini": "1.3.31",
+    "ini": "3.0.0",
+    "os-locale": "^6.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "chiaweilee <ljw@live.jp> (https://github.com/chiaweilee)"
+  ],
+  "compiledConfig": {
+    "deps": [
+      "ini",
+      "os-locale"
+    ],
+    "externals": {
+      "prettier": "@umijs/utils/compiled/prettier",
+      "lodash": "@umijs/utils/compiled/lodash",
+      "glob": "@umijs/utils/compiled/glob"
+    },
+    "excludeDtsDeps": []
+  }
+}

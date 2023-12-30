@@ -26,6 +26,8 @@
     "dev": "umi-scripts father dev"
   },
   "dependencies": {
+    "@sanyajs/preset-sanya": "workspace:*",
+    "@umijs/core": "^4.0.90",
     "@umijs/preset-vue": "^4.0.90"
   },
   "publishConfig": {
