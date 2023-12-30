@@ -1,0 +1,18 @@
+{
+  "name": "@example/vue-demo",
+  "private": true,
+  "scripts": {
+    "analyze": "ANALYZE=1 sanya build",
+    "build": "sanya build",
+    "dev": "sanya dev",
+    "preview": "sanya preview",
+    "setup": "sanya setup",
+    "start": "sanya run dev"
+  },
+  "dependencies": {
+    "@sanyajs/sanya": "workspace:*",
+    "vant": "4.0.11",
+    "vue": "3.2.45"
+  },
+  "version": "0.0.0"
+}
