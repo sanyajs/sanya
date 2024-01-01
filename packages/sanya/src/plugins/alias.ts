@@ -4,7 +4,7 @@ export default (api: IApi) => {
   api.modifyConfig((memo) => {
     memo.alias = {
       ...memo.alias,
-      '@sanyajs/sanya': '@@/exports',
+      'sanya': '@@/exports',
     };
     return memo;
   });

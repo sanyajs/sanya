@@ -147,7 +147,7 @@ importers:
 
   examples/vue-demo:
     dependencies:
-      '@sanyajs/sanya':
+      sanya:
         specifier: workspace:*
         version: link:../../packages/sanya
       vant:

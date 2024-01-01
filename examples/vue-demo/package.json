@@ -10,7 +10,7 @@
     "start": "sanya run dev"
   },
   "dependencies": {
-    "@sanyajs/sanya": "workspace:*",
+    "sanya": "workspace:*",
     "vant": "4.0.11",
     "vue": "3.2.45"
   },
