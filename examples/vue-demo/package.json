@@ -7,7 +7,7 @@
     "dev": "sanya dev",
     "preview": "sanya preview",
     "setup": "sanya setup",
-    "start": "sanya run dev"
+    "start": "npm run dev"
   },
   "dependencies": {
     "sanya": "workspace:*",
