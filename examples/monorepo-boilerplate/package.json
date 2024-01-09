@@ -1,0 +1,12 @@
+{
+  "name": "monorepo-boilerplate",
+  "private": true,
+  "scripts": {
+    "build": "sanya-turbo build",
+    "dev": "sanya-turbo dev",
+    "turbo:clean": "rimraf .turbo"
+  },
+  "devDependencies": {
+    "sanya-turbo": "workspace:*"
+  }
+}

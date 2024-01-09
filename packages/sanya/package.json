@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "@babel/runtime": "7.23.6",
-    "@sanyajs/preset-sanya": "workspace:*",
     "@umijs/core": "^4.0.90"
   },
   "publishConfig": {

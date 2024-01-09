@@ -9,12 +9,11 @@ import {
   setNodeTitle,
   yParser,
 } from "@umijs/utils";
-import { DEV_COMMAND, FRAMEWORK_NAME, MIN_NODE_VERSION } from "../constants";
-
-interface IOpts {
-  presets?: string[];
-  defaultConfigFiles?: string[];
-}
+import {
+  DEV_COMMAND,
+  FRAMEWORK_NAME,
+  MIN_NODE_VERSION,
+} from "../constants";
 
 catchUnhandledRejection();
 
@@ -43,28 +42,33 @@ export async function run() {
     },
     boolean: ["version"],
   });
+
   const command = args._[0];
+
   if ([DEV_COMMAND, "setup"].includes(command)) {
     process.env.NODE_ENV = "development";
   } else if (command === "build") {
     process.env.NODE_ENV = "production";
   }
 
-  if (command === DEV_COMMAND) {
-    dev();
-  } else if (command === "version" || command === "v") {
-    const version = require("../package.json").version;
-    console.log(`${FRAMEWORK_NAME}@${version}`);
-  } else {
-    try {
-      await new Service().run2({
-        name: args._[0],
-        args,
-      });
-    } catch (e: any) {
-      logger.error(e);
-      printHelp.exit();
-      process.exit(1);
-    }
+  switch (command) {
+    case DEV_COMMAND:
+      dev();
+      break;
+    case "version":
+    case "v":
+      console.log(`${FRAMEWORK_NAME}@${require("../package.json").version}`);
+      break;
+    default:
+      try {
+        await new Service().run2({
+          name: command,
+          args,
+        });
+      } catch (e: any) {
+        logger.error(e);
+        printHelp.exit();
+        process.exit(1);
+      }
   }
 }
