@@ -1,0 +1,37 @@
+{
+  "name": "sanya-turbo",
+  "version": "0.1.0",
+  "description": "sanya",
+  "homepage": "https://github.com/sanyajs/sanya/tree/master/packages/go#readme",
+  "bugs": "https://github.com/sanyajs/sanya/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanyajs/sanya"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "sanya-turbo": "bin/sanya-turbo.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "index.d.ts",
+    "index.js"
+  ],
+  "scripts": {
+    "build": "umi-scripts father build",
+    "build:deps": "umi-scripts bundleDeps",
+    "dev": "umi-scripts father dev"
+  },
+  "dependencies": {
+    "turbo": "^1.11.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "chiaweilee <ljw@live.jp> (https://github.com/chiaweilee)"
+  ]
+}
