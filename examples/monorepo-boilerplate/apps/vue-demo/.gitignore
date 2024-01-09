@@ -6,4 +6,5 @@
 /src/.sanya
 /.sanya
 /.sanya-production
-
+/dist
+/node_modules
