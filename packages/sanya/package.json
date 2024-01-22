@@ -1,6 +1,6 @@
 {
   "name": "sanya",
-  "version": "0.1.0",
+  "version": "0.1.0-beta.1",
   "description": "sanya",
   "homepage": "https://github.com/sanyajs/sanya/tree/master/packages/sanya#readme",
   "bugs": "https://github.com/sanyajs/sanya/issues",
@@ -17,6 +17,7 @@
   "files": [
     "bin",
     "dist",
+    "client",
     "index.d.ts",
     "index.js"
   ],
