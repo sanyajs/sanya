@@ -26,6 +26,7 @@
     "dev": "umi-scripts father dev"
   },
   "dependencies": {
+    "@umijs/utils": "^4.0.90",
     "turbo": "^1.11.2"
   },
   "publishConfig": {
